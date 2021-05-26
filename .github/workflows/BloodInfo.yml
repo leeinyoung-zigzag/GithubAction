@@ -2,7 +2,7 @@ name: BloodInfo Bot (혈액정보 봇)
 
 on:
     schedule:
-      - cron: '0 23 * * *' # UST 가 default. UST 23:00는 한국시간 08:
+      - cron: '1 * * * *' # UST 가 default. UST 23:00는 한국시간 08:
 
 jobs:
   build:
