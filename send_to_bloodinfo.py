@@ -2,7 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import json
+import datetime
 
+today = str(datetime.datetime.today().date())
 response = requests.get("https://www.bloodinfo.net/bloodstats_stocks.do")
 html = response.text
 
