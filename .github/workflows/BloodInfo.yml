@@ -1,0 +1,30 @@
+name: BloodInfo Bot (혈액정보 봇)
+
+on: [push]
+#    schedule:
+#      - cron: '0 23 * * *' # UST 가 default. UST 23:00는 한국시간 08:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7] # 파이썬 3.7 버전으로
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name : Python pip upgrade # 파이썬 pip 업그레이드
+      run: python -m pip install --upgrade pip 
+    
+    - name: Install python package # 파이썬 관련 패키지를 설치
+      run: |        
+        pip install beautifulsoup4
+        pip install requests
+    
+    - name: Run! # send_to_weather.py 파일을 실행하시오! 
+      run: | 
+        python send_to_bloodinfo.py
