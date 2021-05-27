@@ -63,7 +63,7 @@ l
 # send to slack
 #######################
 # Slack 인커밍 웹훅
-slack_incoming_url = "https://hooks.slack.com/services/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" # 수정5
+slack_incoming_url = "https://hooks.slack.com/services/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" # 수정5
 slack_payload = {"text": f"*{today}* 오늘의 혈액정보입니다. :drop_of_blood: \n 1. 전체 소요량: {전체소요량} \n :o2:소요량 : {O소요량} \n :a:소요량 : {A소요량} \n :b:소요량 : {B소요량} \n :ab:소요량 : {AB소요량} \n \n 2. 전체혈액보유량 : {전체혈액보유량} \n :o2:혈액보유량 : {O혈액보유량} \n :a:혈액보유량 : {A혈액보유량} \n :b:혈액보유량 : {B혈액보유량} \n :ab:혈액보유량 : {AB혈액보유량} \n \n 3. 전체보유상태 : {전체보유상태} \n :o2:보유상태 : {O보유상태} \n :a:보유상태 : {A보유상태} \n :b:보유상태 : {B보유상태} \n :ab:보유상태 : {AB보유상태} \n ```*적정혈액보유량은 일평균 5일분이상입니다.*```"}
 # 슬랙에 쏩니다!
 req = requests.post(url=slack_incoming_url, data=json.dumps(final_data))
