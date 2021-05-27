@@ -6,6 +6,8 @@ import datetime
 import os
 
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL")
+print(SLACK_WEBHOOK_URL)
+
 today = str(datetime.datetime.today().date())
 response = requests.get("https://www.bloodinfo.net/bloodstats_stocks.do")
 html = response.text
