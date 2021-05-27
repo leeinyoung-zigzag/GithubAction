@@ -5,7 +5,7 @@ import json
 import datetime
 import os
 
-SLACK_WEBHOOK_URL = os.os.getenv("SLACK_WEBHOOK_URL")
+SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
 print(SLACK_WEBHOOK_URL)
 
 today = str(datetime.datetime.today().date())
