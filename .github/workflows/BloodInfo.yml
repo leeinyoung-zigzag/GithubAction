@@ -28,5 +28,5 @@ jobs:
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: | 
-          python send_to_bloodinfo.py
+      run: | 
+        python send_to_bloodinfo.py
