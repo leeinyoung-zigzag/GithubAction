@@ -24,7 +24,12 @@ jobs:
       run: |        
         pip install beautifulsoup4
         pip install requests
-    
+        
+    - name: Slack_Webhook
+      uses: joelwmale/webhook-action@master
+      with:
+        url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
     - name: Run! # send_to_weather.py 파일을 실행하시오! 
       run: | 
         python send_to_bloodinfo.py
